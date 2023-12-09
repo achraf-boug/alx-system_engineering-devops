@@ -1,18 +1,10 @@
 #!/usr/bin/env bash
-# 4 bad luck, 8 is your chance
-
-i=1
-
-while [ "$i" -lt 11 ]; do
-
-  # if 4 bad luck elif 8 good luck
-  if [ "$i" -eq 4 ]; then
-    echo "bad luck"
-  elif [ "$i" -eq 8 ]; then
-    echo "good luck"
-  else
-    echo "Best School"
-  fi
-
-  ((i++))
+# Displays bad,good luck on 4th and 8th lines otherwise Best School, total 10l
+i=0
+while [ $i -lt 10 ]; do
+	if [ $i -eq 3 ]; then echo "bad luck"
+	elif [ $i -eq 7 ]; then echo "good luck"
+	else echo "Best School"
+	fi
+	i=$((i+1))
 done
